@@ -15,7 +15,7 @@ phases:
       - ls -al
       - docker images
       - docker build -t app:latest .
-      - docker tag elogin:latest public.ecr.aws/t4w6r5w9/elogin:$IMAGE_TAG
+      - docker tag app:latest public.ecr.aws/t4w6r5w9/elogin:$IMAGE_TAG
   post_build:
     commands:
       - docker push public.ecr.aws/t4w6r5w9/elogin:$IMAGE_TAG
